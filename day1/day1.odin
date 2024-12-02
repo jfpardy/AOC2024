@@ -6,9 +6,9 @@ import "core:strconv"
 import "core:slice"
 main :: proc (){
     //Task 1
-    read_input_file_to_distance("input.txt")
+    fmt.println(read_input_file_to_distance("input.txt"))
     //Task 2
-    read_input_to_sum("input.txt")
+    fmt.println(read_input_to_sum("input.txt"))
 }
 
 input :: struct {
@@ -56,7 +56,6 @@ read_input_to_sum :: proc(file_name :string) ->int {
     for i:=0 ; i < len(sum_list); i+=1 {
         sum += sum_list[i]
     }
-    fmt.print(sum)
     return sum
 }
 frequency_of_int :: proc(number:int, a: [dynamic]int) -> int {
@@ -73,7 +72,6 @@ read_input_file_to_distance :: proc (file_name: string) -> int {
     output: int = 0
     output = find_distance(result)
     
-    fmt.print(output)
     return output
 }
 find_distance :: proc(input: input) -> int {
