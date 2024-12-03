@@ -4,7 +4,7 @@ import "core:strconv"
 import "core:os"
 import day1 "day1"
 import day2 "day2"
-
+import day3 "day3"
 
 main :: proc()
 {
@@ -33,6 +33,8 @@ main :: proc()
         day_1_tasks()
     case 2:
         day_2_tasks()
+    case 3:
+        day_3_tasks()
     case:
         fmt.println("Invalid day number/Day not yet complete.")
     }
@@ -53,6 +55,15 @@ day_2_tasks :: proc(){
     fmt.println("Task 2: ")
     fmt.println(day2.check_safety_part_2("day2\\input.txt"))
 }
+day_3_tasks :: proc(){
+    //Task 1
+    fmt.println("Task 1: ")
+    fmt.println(day3.task1("day3\\input.txt"))
+    //Task 2
+    fmt.println("Task 2: ")
+    fmt.println(day3.task2("day3\\input.txt"))
+}
+
 
 all_days :: proc(){
     for i:=1; i<=25; i+=1 {
@@ -63,6 +74,8 @@ all_days :: proc(){
             fmt.println("\n")
         case 2:
             day_2_tasks()
+        case 3:
+            day_3_tasks()
         case:
             fmt.println("Day not yet complete.")
         }
